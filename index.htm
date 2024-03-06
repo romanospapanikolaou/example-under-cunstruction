@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- add icon link -->
+    <link
+      rel="icon"
+      href="https://img.icons8.com/water-color/50/source-code.png"
+      type="image/x-icon"
+    />
+    <title>Under Construction</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+      }
+      .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+      }
+      .content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer {
+        background-color: #000000;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .typedText {
+        color: rgb(229, 149, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><span class="typedText"></span></h1>
+      <div class="content">
+        <img
+          src="/assets/img/under-construction.jpeg"
+          alt="Under Construction"
+        />
+      </div>
+      <div class="footer">
+        Copyright &copy; Romanos Papanikolaou
+        <span id="currentYear"></span>. All Rights Reserved.
+      </div>
+    </div>
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      // Get current year for the footer
+      const currentYear = new Date().getFullYear();
+      document.getElementById("currentYear").textContent = currentYear;
+
+      var typingEffect = new Typed(".typedText", {
+        strings: ["I'm #yourDev{...} is"],
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 60,
+        backDelay: 3000,
+      });
+    </script>
+  </body>
+</html>
